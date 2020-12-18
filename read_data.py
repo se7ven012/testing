@@ -38,8 +38,10 @@ def read_datasets(N,height,width,channels,randomlist,imgs_dir,truth_dir,mask_dir
             # Masks
             if int(i) in range(1,21):
                 mask = Image.open(mask_dir + files[i-1][0:2] + '_test_mask.gif')
-            else:
+            elif int(i) in range(21,41):
                 mask = Image.open(mask_dir + files[i-1][0:2] + '_training_mask.gif')
+            else:
+                print('error!')
             masks[counter] = np.asarray(mask)
             counter+=1
     # Reshaping the images 
