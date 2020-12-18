@@ -34,7 +34,7 @@ def read_datasets(randomlist,imgs_dir,truth_dir,mask_dir,train = True):
     masks = np.empty((N,height,width))
     counter = 0
     for root, dirs, files in os.walk(imgs_dir):
-        for i in randomlist:
+        for i in range(randomlist):
             # Original images
             img = Image.open(imgs_dir + files[i-1])
             imgs[counter] = np.asarray(img)
