@@ -28,7 +28,7 @@ def write_hdf5(arr,outfile):
     with h5py.File(outfile,"w") as f:
         f.create_dataset("image", data=arr, dtype=arr.dtype)
         
-def read_datasets(randomlist,imgs_dir,truth_dir,mask_dir,train = True):
+def read_datasets(N,height,width,channels,randomlist,imgs_dir,truth_dir,mask_dir,train = True):
     imgs = np.empty((N,height,width,channels))
     truth = np.empty((N,height,width))
     masks = np.empty((N,height,width))
