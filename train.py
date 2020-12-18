@@ -42,7 +42,7 @@ NumOfUniqueTraining=[]
 NumOfUniqueTesting=[]
 
 # 0.92 hours for 1 bootstrap
-for bootstraper in range(30,36):
+for bootstraper in range(1):
     print('====Random Sampling Start====')
     ## =====Random sampling part=====
     # Create new directories for random datasets
