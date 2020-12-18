@@ -36,7 +36,7 @@ def read_datasets(N,height,width,channels,randomlist,imgs_dir,truth_dir,mask_dir
             true = Image.open(truth_dir + files[i-1][0:2] + '_manual1.gif')
             truth[counter] = np.asarray(true)
             # Masks
-            if i in range(1,21):
+            if int(i) in range(1,21):
                 mask = Image.open(mask_dir + files[i-1][0:2] + '_test_mask.gif')
             else:
                 mask = Image.open(mask_dir + files[i-1][0:2] + '_training_mask.gif')
