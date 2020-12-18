@@ -116,3 +116,22 @@ write_hdf5(imgs_test, path + 'imgs_test.hdf5')
 write_hdf5(truth_test, path + 'truth_test.hdf5')
 write_hdf5(masks_test, path + 'masks_test.hdf5')
 print('Test data done.')
+
+#%%
+# import random
+
+# Image_Index = []
+# for x in range(1 , 41):
+#     Image_Index.append(x)
+# train_indexlist = []
+# for i in range(40):
+#     x = random.sample(Image_Index,k=1)
+#     train_indexlist.append(x[0])
+# all_origi_path = './DRIVE/all/images/'
+# for root, dirs, files in os.walk(all_origi_path):
+#     for i in train_indexlist:
+#         if i in range(1,21):
+#             print(i,'_test_mask.gif')
+#         else:
+#             print(i,'_training_mask.gif')
+# %%
