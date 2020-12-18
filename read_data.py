@@ -18,12 +18,6 @@ all_origi_path = './DRIVE/all/images/'
 all_truth_path = './DRIVE/all/1st_manual/'
 all_mask_path = './DRIVE/all/mask/'
 
-# Pre-processing parameters 
-N = 40
-channels = 3
-height = 584
-width = 565
-
 def write_hdf5(arr,outfile):
     with h5py.File(outfile,"w") as f:
         f.create_dataset("image", data=arr, dtype=arr.dtype)
